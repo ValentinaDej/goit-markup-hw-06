@@ -550,7 +550,7 @@ button {
   padding-left: 16px;
   margin-right: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 
   font-size: 16px;
@@ -579,6 +579,7 @@ button {
   font-family: var(--font-page);
   line-height: 1.88;
   letter-spacing: 0.06em;
+  box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .footer-social {
@@ -715,18 +716,31 @@ button {
 }
 
 .btn-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-size: contain;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   margin-right: 8px;
   margin-top: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
   background-color: transparent;
   padding: 0;
+  transition: fill var(--transformation-property);
 }
+
+.btn-close:hover {
+  fill: var(--color-text-accent);
+}
+
 .modal-container {
   width: 528px;
   margin: 0 auto;
   padding: 0 40px 40px 40px;
   position: relative;
-  outline: 1px solid tomato;
 }
 
 .modal-title {
@@ -767,6 +781,7 @@ button {
   font-weight: 400;
   font-size: 12px;
   color: var(--color-text-black);
+  transition: border-color var(--transformation-property);
 }
 
 .user-data-coment {
@@ -780,12 +795,14 @@ button {
   font-size: 12px;
   line-height: 1.17;
   color: var(--color-text-black);
+  transition: border-color var(--transformation-property);
 }
 
 .user-data-icon {
   position: absolute;
   left: 12px;
   top: 27px;
+  transition: fill var(--transformation-property);
 }
 
 .user-data-input:focus,
@@ -807,6 +824,8 @@ button {
 .check-label {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 22px;
 
   font-weight: 400;
   font-size: 14px;
@@ -818,4 +837,30 @@ button {
 .user-agreement-text {
   color: var(--color-text-accent);
   margin-left: 2px;
+}
+
+.user-agreement-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--color-text-blacklight);
+  border-radius: 4px;
+  margin-right: 7px;
+}
+
+.user-agreement:checked + .user-agreement-icon {
+  background-color: var(--color-text-accent);
+  border-color: var(--color-text-accent);
+  background-origin: border-box;
+}
+
+.user-data-btn {
+  padding: 10px 52px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--color-text-white);
+  background-color: var(--color-button-hover);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
