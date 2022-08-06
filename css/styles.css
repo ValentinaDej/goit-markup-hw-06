@@ -828,6 +828,16 @@ button {
   cursor: pointer;
 }
 
+.user-data-label:focus-within .user-data-input,
+.user-data-label:hover .user-data-input {
+  border: 1px solid var(--color-text-accent);
+}
+
+.user-data-label:focus-within .user-data-icon,
+.user-data-label:hover .user-data-icon {
+  fill: var(--color-text-accent);
+}
+
 .check-label {
   display: flex;
   justify-content: center;
