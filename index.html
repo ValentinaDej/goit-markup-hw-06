@@ -439,50 +439,50 @@
             </li>
           </ul>
         </div>
-        <form name="email-registration" class="email-registration">
+        <div class="email-registration">
           <p class="email-title">Підпишіться на розсилку</p>
-          <div class="email-group">
-            <input type="email" placeholder="E-mail" class="email-input" />
+          <form name="email-group" class="email-group">
+            <input type="email" placeholder="E-mail" class="email-input" required />
             <button type="submit" class="email-submit">
               Підписатися
               <svg class="email-submit-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-send"></use>
               </svg>
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
-      <form autocomplete="off" class="modal">
+      <div class="modal">
         <button data-modal-close class="btn-close">
           <svg width="18" height="18">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <div class="modal-container">
-          <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
+        <form autocomplete="off" class="modal-container">
+          <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
           <div class="user-data">
             <label class="user-data-label"
-              >Ім'я <input class="user-data-input" type="text" name="name" />
+              >Ім'я <input class="user-data-input" type="text" name="name" required />
               <svg class="user-data-icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
             </label>
             <label class="user-data-label"
-              >Телефон <input class="user-data-input" type="tel" name="tel" />
+              >Телефон <input class="user-data-input" type="tel" name="tel" required />
               <svg class="user-data-icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </label>
             <label class="user-data-label"
               >Пошта
-              <input class="user-data-input" type="email" name="email" />
+              <input class="user-data-input" type="email" name="email" required />
               <svg class="user-data-icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
             </label>
-            <label class="user-data-label"
+            <label class="user-data-label add-margin"
               >Коментар<textarea
                 class="user-data-coment"
                 name="coment"
@@ -496,6 +496,7 @@
                 class="user-agreement visually-hidden"
                 name="agreement"
                 value="agreement"
+                required
               />
               <svg class="user-agreement-icon" width="16" height="15">
                 <use href="./images/icons.svg#icon-check"></use>
@@ -507,8 +508,8 @@
             </label>
             <button type="submit" class="user-data-btn">Відправити</button>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
     <script src="./js/modal.js"></script>
   </body>
