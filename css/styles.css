@@ -779,21 +779,6 @@ button {
   color: var(--color-text-grey);
 }
 
-.user-data-label {
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-
-  font-family: var(--font-page);
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: var(--color-text-grey);
-}
-
 .user-data-label.add-margin {
   margin-bottom: 20px;
 }
